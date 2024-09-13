@@ -37,7 +37,7 @@ def get_unit():
             break
 
         # check if it's time
-        elif response in ['s', 'seconds', 'h', 'hour']:
+        elif response in ['s', 'seconds', 'm', 'minutes' 'h', 'hour', 'd', 'day']:
             return "time"
 
         # check for an Distance ...
