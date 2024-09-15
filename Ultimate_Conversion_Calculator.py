@@ -30,28 +30,28 @@ Type the "to" unit and press Enter.
 def get_unit():
 
     while True:
-        response = input("Unit: ")
+        response = input("Type: ")
 
         # check for 'i' or the exit code
         if response == "xxx":
-            break
+            return "exit"
 
         # check if it's time
-        elif response in ['s', 'seconds', 'm', 'minutes' 'h', 'hour', 'd', 'day']:
+        elif response in ['s', 'seconds', 'm', 'minutes' 'h', 'hour', 'd', 'day', 'time']:
             return "time"
 
         # check for an Distance ...
-        elif response in ['mm', 'cm', 'm', 'km']:
+        elif response in ['mm', 'cm', 'm', 'km', 'dist', 'distance']:
             return "distance"
 
         # check for text
-        elif response in ['mg', 'g', 'kg']:
+        elif response in ['mg', 'g', 'kg', 'mass', 'weight']:
             return "mass"
 
-        elif response in ['ml', 'l']:
+        elif response in ['ml', 'l', 'liquid']:
             return "liquid"
 
-        elif response in ['b', 'kb', 'mb', 'gb']:
+        elif response in ['b', 'kb', 'mb', 'gb', 'data']:
             return "data"
 
         # if the response is invalid output an error
@@ -202,3 +202,6 @@ while True:
 
     elif unit_type == "data":
         data()
+
+    elif unit_type == "exit":
+        break
