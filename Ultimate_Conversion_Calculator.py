@@ -86,9 +86,13 @@ def distance():
 def time():
     time_dict = {
         "s": 86400,
+        "seconds": 86400,
         "m": 1440,
+        "minutes": 1440,
         "h": 24,
-        "d": 1
+        "hour": 24,
+        "d": 1,
+        "day": 1
     }
     # Get amount and unit (assume they are valid)
     amount_time = float(input("how much: "))
